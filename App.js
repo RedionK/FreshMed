@@ -21,6 +21,7 @@ import { TouchableOpacity } from "react-native-gesture-handler";
 
 import DropDownPicker from "react-native-dropdown-picker";
 import CheckBox from "@react-native-community/checkbox";
+// import MapView from 'react-native-maps';
 
 function HomeScreen({ navigation }) {
   return (
@@ -313,7 +314,10 @@ function RecipeScreen() {
         </View>
       </View>
       <View>
-        <Text>Help </Text>
+        <Text style={{ fontSize: 30, alignSelf: "center" }}>
+          Help me find ingredients
+        </Text>
+        
       </View>
     </View>
   );
