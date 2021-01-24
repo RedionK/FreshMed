@@ -21,21 +21,21 @@ import { TouchableOpacity } from "react-native-gesture-handler";
 
 import DropDownPicker from "react-native-dropdown-picker";
 import CheckBox from "@react-native-community/checkbox";
-// import MapView from 'react-native-maps';
+import MapView from "react-native-maps";
 
-function HomeScreen({ navigation }) {
-  return (
-    <View style={styles.container}>
-      <Text>Welcome to FreshMed</Text>
-      <Button
-        onPress={() => {
-          navigation.navigate("MealPlan");
-        }}
-        title="Go to MealPlan Screen"
-      />
-    </View>
-  );
-}
+// function HomeScreen({ navigation }) {
+//   return (
+//     <View style={styles.container}>
+//       <Text>Welcome to FreshMed</Text>
+//       <Button
+//         onPress={() => {
+//           navigation.navigate("MealPlan");
+//         }}
+//         title="Go to MealPlan Screen"
+//       />
+//     </View>
+//   );
+// }
 
 function NutritionScreen({ navigation }) {
   return (
@@ -230,96 +230,107 @@ function RecipeScreen() {
   const [toggleCheckBox, setToggleCheckBox] = React.useState(false);
 
   return (
-    <View style={{ paddingTop: 70, paddingLeft: 30 }}>
-      <View style={{ marginBottom: 20 }}>
-        <Text style={{ fontSize: 30 }}>Oatmeal</Text>
-        <Text style={{ fontSize: 24 }}>245 Calories</Text>
-        <Text>Prep: 5 minutes</Text>
-        <Text>Cook: 10 minutes</Text>
-        <Text>Total: 15 minutes</Text>
-        <Text>Servings: 2</Text>
-      </View>
-      <View style={{ marginBottom: 20 }}>
-        <Text style={{ marginBottom: 10, fontSize: 30 }}>Nutrition Info</Text>
-        <Text>Protein 9.7g</Text>
-        <Text>Carbohydrates 72.4g</Text>
-        <Text>Fat 16.7g</Text>
-        <Text>Cholesterol 40.3mg</Text>
-        <Text>Sodium 443.3mg</Text>
-      </View>
-      <View style={{ marginBottom: 20 }}>
-        <Text style={{ marginBottom: 10, fontSize: 30 }}>Ingredients</Text>
-        <Text style={{ marginBottom: 20 }}>Recipe yields 2 servings</Text>
-        <View
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "flex-start",
-            paddingBottom: 10
-          }}
-        >
-          <CheckBox
-            disabled={false}
-            value={toggleCheckBox}
-            onValueChange={(newValue) => setToggleCheckBox(newValue)}
-          />
-          <Text style={{ paddingLeft: 20 }}>Oats - 2 tablespoons</Text>
+    <ScrollView>
+      <View style={{ paddingTop: 70, paddingLeft: 30 }}>
+        <View style={{ marginBottom: 20 }}>
+          <Text style={{ fontSize: 30 }}>Oatmeal</Text>
+          <Text style={{ fontSize: 24 }}>245 Calories</Text>
+          <Text>Prep: 5 minutes</Text>
+          <Text>Cook: 10 minutes</Text>
+          <Text>Total: 15 minutes</Text>
+          <Text>Servings: 2</Text>
         </View>
-        <View
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "flex-start",
-            paddingBottom: 10
-          }}
-        >
-          <CheckBox
-            disabled={false}
-            value={toggleCheckBox}
-            onValueChange={(newValue) => setToggleCheckBox(newValue)}
-          />
-          <Text style={{ paddingLeft: 20 }}>Banana - 1 whole</Text>
+        <View style={{ marginBottom: 20 }}>
+          <Text style={{ marginBottom: 10, fontSize: 30 }}>Nutrition Info</Text>
+          <Text>Protein 9.7g</Text>
+          <Text>Carbohydrates 72.4g</Text>
+          <Text>Fat 16.7g</Text>
+          <Text>Cholesterol 40.3mg</Text>
+          <Text>Sodium 443.3mg</Text>
         </View>
-        <View
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "flex-start",
-            paddingBottom: 10
-          }}
-        >
-          <CheckBox
-            disabled={false}
-            value={toggleCheckBox}
-            onValueChange={(newValue) => setToggleCheckBox(newValue)}
-          />
-          <Text style={{ paddingLeft: 20 }}>Milk - 1 cup</Text>
+        <View style={{ marginBottom: 20 }}>
+          <Text style={{ marginBottom: 10, fontSize: 30 }}>Ingredients</Text>
+          <Text style={{ marginBottom: 20 }}>Recipe yields 2 servings</Text>
+          <View
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "flex-start",
+              paddingBottom: 10
+            }}
+          >
+            <CheckBox
+              disabled={false}
+              value={toggleCheckBox}
+              onValueChange={(newValue) => setToggleCheckBox(newValue)}
+            />
+            <Text style={{ paddingLeft: 20 }}>Oats - 2 tablespoons</Text>
+          </View>
+          <View
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "flex-start",
+              paddingBottom: 10
+            }}
+          >
+            <CheckBox
+              disabled={false}
+              value={toggleCheckBox}
+              onValueChange={(newValue) => setToggleCheckBox(newValue)}
+            />
+            <Text style={{ paddingLeft: 20 }}>Banana - 1 whole</Text>
+          </View>
+          <View
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "flex-start",
+              paddingBottom: 10
+            }}
+          >
+            <CheckBox
+              disabled={false}
+              value={toggleCheckBox}
+              onValueChange={(newValue) => setToggleCheckBox(newValue)}
+            />
+            <Text style={{ paddingLeft: 20 }}>Milk - 1 cup</Text>
+          </View>
+          <View
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "flex-start",
+              paddingBottom: 10
+            }}
+          >
+            <CheckBox
+              disabled={false}
+              value={toggleCheckBox}
+              onValueChange={(newValue) => setToggleCheckBox(newValue)}
+            />
+            <Text style={{ paddingLeft: 20 }}>
+              Cinnamon powder - 1/4 teaspoon
+            </Text>
+          </View>
         </View>
-        <View
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "flex-start",
-            paddingBottom: 10
-          }}
-        >
-          <CheckBox
-            disabled={false}
-            value={toggleCheckBox}
-            onValueChange={(newValue) => setToggleCheckBox(newValue)}
-          />
-          <Text style={{ paddingLeft: 20 }}>
-            Cinnamon powder - 1/4 teaspoon
+        <View>
+          <Text style={{ fontSize: 30, alignSelf: "center" }}>
+            Help me find ingredients
           </Text>
+          <View>
+            <MapView
+              initialRegion={{
+                latitude: 37.78825,
+                longitude: -122.4324,
+                latitudeDelta: 0.0922,
+                longitudeDelta: 0.0421
+              }}
+            />
+          </View>
         </View>
       </View>
-      <View>
-        <Text style={{ fontSize: 30, alignSelf: "center" }}>
-          Help me find ingredients
-        </Text>
-        
-      </View>
-    </View>
+    </ScrollView>
   );
 }
 
